@@ -15,7 +15,7 @@ before_action :set_post, only:i[show edit update destroy]
 
   def create
     post = Post.create!(post_params)
-    redirect_to post
+    redirect_to post, notice: "投稿しました"
   end
 
   def edit
